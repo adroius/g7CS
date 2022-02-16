@@ -7,7 +7,7 @@ public class JobOffer extends Offer {
         UNDEFINED,
         TEMPORARY
     }
-
+//pato
     public JobOffer(String companyName, String offerName, int salary, boolean activeOffer, String description, int iTypeOfWork, int iTypeOfContract) {
         super(companyName, offerName, salary, activeOffer, description, iTypeOfWork);
         this.iTypeOfContract = iTypeOfContract;
