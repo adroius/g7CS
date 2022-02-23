@@ -24,3 +24,20 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: 'circleci/openjdk:11-jdk'
+    steps:
+      - checkout
+      - run:
+          name: Analyze on SonarCloud
+          command: gradle build sonarqube"
+
+workflows:
+  main:
+    jobs:
+      - build:
+          context: SonarCloud
