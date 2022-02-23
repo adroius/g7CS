@@ -15,3 +15,14 @@ buildscript {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+plugins {
+  id "org.sonarqube" version "3.3"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "adroius_g7CS"
+    property "sonar.organization", "adroius"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
